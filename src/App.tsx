@@ -10,6 +10,7 @@ import Captions from "./pages/Captions";
 import AIReframe from "./pages/AIReframe";
 import Editor from "./pages/Editor";
 import HowItWorks from "./pages/HowItWorks";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/aireframe" element={<AIReframe />} />
           <Route path="/editor" element={<Editor />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

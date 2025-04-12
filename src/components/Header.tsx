@@ -77,7 +77,7 @@ const Header: React.FC = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <Link to="/how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How it works</Link>
-          <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+          <Link to="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
         </div>
         <div>
           <Button className="flex items-center gap-2">
