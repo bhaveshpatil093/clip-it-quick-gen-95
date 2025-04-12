@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   ArrowRight, 
@@ -6,12 +7,11 @@ import {
   Film, 
   Captions, 
   ImageUp, 
-  Award, 
-  Calendar, 
   FileCode, 
-  FileText, 
-  Users, 
-  Scissors 
+  Scissors,
+  Upload,
+  Sparkles,
+  Share2
 } from 'lucide-react';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -177,17 +177,71 @@ const Index = () => {
       <section id="how-it-works" className="py-20 bg-muted/20">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Customized with <span className="text-primary">AI</span></h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our advanced AI technology handles the hard work so you can focus on creating great content
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              How <span className="text-accent">Clip-it-Quick</span> Works
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Transform any video into shareable clips in just a few simple steps
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature screenshots */}
-            <div className="aspect-video bg-card rounded-xl overflow-hidden border border-border"></div>
-            <div className="aspect-video bg-card rounded-xl overflow-hidden border border-border"></div>
-            <div className="aspect-video bg-card rounded-xl overflow-hidden border border-border"></div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 relative">
+            {/* Connecting line behind the steps */}
+            <div className="hidden md:block absolute top-1/3 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/40 via-accent/40 to-primary/40"></div>
+            
+            {/* Step 1 */}
+            <div className="relative flex flex-col items-center">
+              <div className="w-16 h-16 mb-6 bg-muted rounded-full flex items-center justify-center z-10 ring-4 ring-background shadow-lg">
+                <Upload className="h-8 w-8 text-accent" />
+              </div>
+              <div className="w-12 h-12 absolute -top-6 -right-6 animate-pulse opacity-20 bg-accent rounded-full blur-xl"></div>
+              <h3 className="text-xl font-bold mb-3">Upload Video</h3>
+              <p className="text-center text-muted-foreground">
+                Start by uploading your video to our platform. We support all common formats.
+              </p>
+            </div>
+            
+            {/* Step 2 */}
+            <div className="relative flex flex-col items-center">
+              <div className="w-16 h-16 mb-6 bg-muted rounded-full flex items-center justify-center z-10 ring-4 ring-background shadow-lg">
+                <Sparkles className="h-8 w-8 text-accent" />
+              </div>
+              <div className="w-12 h-12 absolute -top-6 -left-6 animate-pulse opacity-20 bg-primary rounded-full blur-xl"></div>
+              <h3 className="text-xl font-bold mb-3">AI Analysis</h3>
+              <p className="text-center text-muted-foreground">
+                Our AI automatically identifies the most engaging moments in your video.
+              </p>
+            </div>
+            
+            {/* Step 3 */}
+            <div className="relative flex flex-col items-center">
+              <div className="w-16 h-16 mb-6 bg-muted rounded-full flex items-center justify-center z-10 ring-4 ring-background shadow-lg">
+                <Scissors className="h-8 w-8 text-accent" />
+              </div>
+              <div className="w-12 h-12 absolute -top-6 -right-6 animate-pulse opacity-20 bg-accent rounded-full blur-xl"></div>
+              <h3 className="text-xl font-bold mb-3">Clip Generation</h3>
+              <p className="text-center text-muted-foreground">
+                Choose from AI-suggested clips or customize them in our intuitive editor.
+              </p>
+            </div>
+            
+            {/* Step 4 */}
+            <div className="relative flex flex-col items-center">
+              <div className="w-16 h-16 mb-6 bg-muted rounded-full flex items-center justify-center z-10 ring-4 ring-background shadow-lg">
+                <Share2 className="h-8 w-8 text-accent" />
+              </div>
+              <div className="w-12 h-12 absolute -top-6 -left-6 animate-pulse opacity-20 bg-primary rounded-full blur-xl"></div>
+              <h3 className="text-xl font-bold mb-3">Share Everywhere</h3>
+              <p className="text-center text-muted-foreground">
+                Export your clips in multiple formats optimized for different social platforms.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Button size="lg" className="gap-2">
+              Try It Now <ArrowRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
