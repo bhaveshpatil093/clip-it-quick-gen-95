@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Check, Play, ClipboardCheck, FastForward, PieChart, Users } from 'lucide-react';
+import { ArrowRight, Check, Play, ClipboardCheck, FastForward, PieChart, Users, Scissors } from 'lucide-react';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
