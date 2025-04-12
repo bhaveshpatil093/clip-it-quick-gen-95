@@ -54,13 +54,13 @@ const Header: React.FC = () => {
                         <p className="text-xs text-muted-foreground">The fastest way to turn any video into viral shorts</p>
                       </div>
                     </Link>
-                    <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
+                    <Link to="/captions" className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Captions className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Animated captions</h3>
                         <p className="text-xs text-muted-foreground">The fastest way to add animated captions</p>
                       </div>
-                    </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <ImageUp className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
@@ -112,7 +112,9 @@ const Header: React.FC = () => {
           <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
         </div>
         <div>
-          <Button as={Link} to="/clipanything">Get Started</Button>
+          <Button className="flex items-center gap-2">
+            <Link to="/clipanything" className="text-white">Get Started</Link>
+          </Button>
         </div>
       </nav>
     </header>
