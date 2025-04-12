@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserPlus, Mail, Key, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const SignUp = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,6 +36,44 @@ const SignUp = () => {
       title: "Account created!",
       description: "You've successfully signed up.",
     });
+    // Redirect to home page after successful sign up
+    navigate("/");
+  };
+
+  const handleGoogleSignUp = () => {
+    // Implement Google OAuth sign-up
+    console.log("Signing up with Google");
+    toast({
+      title: "Google Sign Up",
+      description: "Signing up with Google...",
+    });
+    
+    // Simulate authentication process with a timeout
+    setTimeout(() => {
+      toast({
+        title: "Account created!",
+        description: "You've successfully signed up with Google.",
+      });
+      navigate("/");
+    }, 1500);
+  };
+
+  const handleGitHubSignUp = () => {
+    // Implement GitHub OAuth sign-up
+    console.log("Signing up with GitHub");
+    toast({
+      title: "GitHub Sign Up",
+      description: "Signing up with GitHub...",
+    });
+    
+    // Simulate authentication process with a timeout
+    setTimeout(() => {
+      toast({
+        title: "Account created!",
+        description: "You've successfully signed up with GitHub.",
+      });
+      navigate("/");
+    }, 1500);
   };
 
   return (
@@ -146,11 +185,11 @@ const SignUp = () => {
         </div>
 
         <div className="grid gap-4">
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" className="w-full" onClick={handleGoogleSignUp}>
             <img src="https://authjs.dev/img/providers/google.svg" className="mr-2 h-4 w-4" />
             Google
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" className="w-full" onClick={handleGitHubSignUp}>
             <img src="https://authjs.dev/img/providers/github-dark.svg" className="mr-2 h-4 w-4" />
             GitHub
           </Button>

@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
-import { LogIn, Mail, Key, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { LogIn, Mail, Key, ArrowRight, Github, Chrome } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -19,6 +19,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const SignIn = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,6 +34,44 @@ const SignIn = () => {
       title: "Sign in successful",
       description: "Welcome back!",
     });
+    // Redirect to home page after successful sign in
+    navigate("/");
+  };
+
+  const handleGoogleSignIn = () => {
+    // Implement Google OAuth sign-in
+    console.log("Signing in with Google");
+    toast({
+      title: "Google Sign In",
+      description: "Signing in with Google...",
+    });
+    
+    // Simulate authentication process with a timeout
+    setTimeout(() => {
+      toast({
+        title: "Sign in successful",
+        description: "Welcome back!",
+      });
+      navigate("/");
+    }, 1500);
+  };
+
+  const handleGitHubSignIn = () => {
+    // Implement GitHub OAuth sign-in
+    console.log("Signing in with GitHub");
+    toast({
+      title: "GitHub Sign In",
+      description: "Signing in with GitHub...",
+    });
+    
+    // Simulate authentication process with a timeout
+    setTimeout(() => {
+      toast({
+        title: "Sign in successful",
+        description: "Welcome back!",
+      });
+      navigate("/");
+    }, 1500);
   };
 
   return (
@@ -124,11 +163,11 @@ const SignIn = () => {
         </div>
 
         <div className="grid gap-4">
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" className="w-full" onClick={handleGoogleSignIn}>
             <img src="https://authjs.dev/img/providers/google.svg" className="mr-2 h-4 w-4" />
             Google
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" className="w-full" onClick={handleGitHubSignIn}>
             <img src="https://authjs.dev/img/providers/github-dark.svg" className="mr-2 h-4 w-4" />
             GitHub
           </Button>
