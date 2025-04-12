@@ -69,41 +69,41 @@ const Header: React.FC = () => {
                         <p className="text-xs text-muted-foreground">Resize any video for every platform in 1 click</p>
                       </div>
                     </Link>
+                    <Link to="/editor" className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
+                      <FileCode className="h-5 w-5 text-accent flex-shrink-0" />
+                      <div>
+                        <h3 className="text-sm font-medium">Editor</h3>
+                        <p className="text-xs text-muted-foreground">All-in-one AI editor. No editing skills required</p>
+                      </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Award className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">AI B-Roll</h3>
                         <p className="text-xs text-muted-foreground">Get relevant AI B-Roll in 1 click, under 1 minute</p>
                       </div>
-                    </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Calendar className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Social scheduler</h3>
                         <p className="text-xs text-muted-foreground">Schedule a month's posts to all platforms in 10 minutes</p>
                       </div>
-                    </div>
-                    <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
-                      <FileCode className="h-5 w-5 text-accent flex-shrink-0" />
-                      <div>
-                        <h3 className="text-sm font-medium">Editor</h3>
-                        <p className="text-xs text-muted-foreground">All-in-one AI editor. No editing skills required</p>
-                      </div>
-                    </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <FileText className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Export to XML</h3>
                         <p className="text-xs text-muted-foreground">Edit in Adobe Premiere Pro or DaVinci Resolve at ease</p>
                       </div>
-                    </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Users className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Team workspace</h3>
                         <p className="text-xs text-muted-foreground">Maximize your team's productivity with AI</p>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
         </div>
         <div>
           <Button className="flex items-center gap-2">
-            <Link to="/clipanything" className="text-white">Get Started</Link>
+            <Link to="/editor" className="text-white">Try Editor</Link>
           </Button>
         </div>
       </nav>
