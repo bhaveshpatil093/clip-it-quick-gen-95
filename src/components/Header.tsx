@@ -82,28 +82,28 @@ const Header: React.FC = () => {
                         <h3 className="text-sm font-medium">AI B-Roll</h3>
                         <p className="text-xs text-muted-foreground">Get relevant AI B-Roll in 1 click, under 1 minute</p>
                       </div>
-                    </Link>
+                    </div>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Calendar className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Social scheduler</h3>
                         <p className="text-xs text-muted-foreground">Schedule a month's posts to all platforms in 10 minutes</p>
                       </div>
-                    </Link>
+                    </div>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <FileText className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Export to XML</h3>
                         <p className="text-xs text-muted-foreground">Edit in Adobe Premiere Pro or DaVinci Resolve at ease</p>
                       </div>
-                    </Link>
+                    </div>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Users className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">Team workspace</h3>
                         <p className="text-xs text-muted-foreground">Maximize your team's productivity with AI</p>
                       </div>
-                    </Link>
+                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
