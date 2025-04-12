@@ -1,6 +1,18 @@
-
 import React from 'react';
-import { ArrowRight, Check, Play, ClipboardCheck, FastForward, PieChart, Users, Scissors } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Check, 
+  Play, 
+  Film, 
+  Captions, 
+  ImageUp, 
+  Award, 
+  Calendar, 
+  FileCode, 
+  FileText, 
+  Users, 
+  Scissors 
+} from 'lucide-react';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -101,30 +113,60 @@ const Index = () => {
             <Card className="bg-card border-border">
               <CardContent className="pt-6">
                 <div className="mb-4">
-                  <ClipboardCheck className="h-8 w-8 text-accent" />
+                  <Film className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">AI analysis</h3>
-                <p className="text-muted-foreground">Our AI analyzes your video content to identify key moments, quotes, and engaging sections worth highlighting.</p>
+                <h3 className="text-xl font-bold mb-2">ClipAnything</h3>
+                <p className="text-muted-foreground">The fastest way to turn any video into viral shorts. Our AI finds the most engaging moments.</p>
               </CardContent>
             </Card>
             
             <Card className="bg-card border-border">
               <CardContent className="pt-6">
                 <div className="mb-4">
-                  <FastForward className="h-8 w-8 text-accent" />
+                  <Captions className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Advanced extraction</h3>
-                <p className="text-muted-foreground">Automatically extract the perfect clips with our intelligent algorithm that understands context and relevance.</p>
+                <h3 className="text-xl font-bold mb-2">Animated captions</h3>
+                <p className="text-muted-foreground">Automatically add eye-catching animated captions to your videos with just one click.</p>
               </CardContent>
             </Card>
             
             <Card className="bg-card border-border">
               <CardContent className="pt-6">
                 <div className="mb-4">
-                  <PieChart className="h-8 w-8 text-accent" />
+                  <ImageUp className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Quick exports</h3>
-                <p className="text-muted-foreground">Download your highlights in multiple formats optimized for different social media platforms.</p>
+                <h3 className="text-xl font-bold mb-2">AI Reframe</h3>
+                <p className="text-muted-foreground">Resize any video for every platform in 1 click - vertical for TikTok or horizontal for YouTube.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border">
+              <CardContent className="pt-6">
+                <div className="mb-4">
+                  <Award className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">AI B-Roll</h3>
+                <p className="text-muted-foreground">Get relevant AI B-Roll footage in 1 click, under 1 minute. Perfect for enhancing your video content.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border">
+              <CardContent className="pt-6">
+                <div className="mb-4">
+                  <Calendar className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Social scheduler</h3>
+                <p className="text-muted-foreground">Schedule a month's posts to all platforms in 10 minutes with our integrated social media tools.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border">
+              <CardContent className="pt-6">
+                <div className="mb-4">
+                  <Users className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Team workspace</h3>
+                <p className="text-muted-foreground">Maximize your team's productivity with AI-powered collaboration tools for video content creation.</p>
               </CardContent>
             </Card>
           </div>
