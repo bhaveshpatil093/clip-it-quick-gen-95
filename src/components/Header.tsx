@@ -6,7 +6,9 @@ import {
   ChevronDown, 
   Film, 
   Captions, 
-  FileCode
+  FileCode,
+  LogIn,
+  UserPlus
 } from 'lucide-react';
 import { AspectRatio } from '@/components/icons';
 import { Button } from '@/components/ui/button';
@@ -79,9 +81,14 @@ const Header: React.FC = () => {
           <Link to="/how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How it works</Link>
           <Link to="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
         </div>
-        <div>
+        <div className="flex gap-3 items-center">
+          <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <LogIn className="h-4 w-4" />
+            <Link to="/signin">Sign In</Link>
+          </Button>
           <Button className="flex items-center gap-2">
-            <Link to="/editor" className="text-white">Try Editor</Link>
+            <UserPlus className="h-4 w-4" />
+            <Link to="/signup" className="text-white">Sign Up - It's Free</Link>
           </Button>
         </div>
       </nav>
