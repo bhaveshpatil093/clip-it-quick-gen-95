@@ -11,7 +11,10 @@ import {
   Scissors,
   Upload,
   Sparkles,
-  Share2
+  Share2,
+  Award,
+  Calendar,
+  Users
 } from 'lucide-react';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
