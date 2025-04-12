@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   ArrowRight, 
@@ -11,11 +10,9 @@ import {
   Scissors,
   Upload,
   Sparkles,
-  Share2,
-  Award,
-  Calendar,
-  Users
+  Share2
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -48,11 +45,11 @@ const Index = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="gap-2">
-                Try it free <ArrowRight className="h-4 w-4" />
+              <Button size="lg" className="gap-2" asChild>
+                <Link to="/signin">Try it free <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button size="lg" variant="outline" className="gap-2">
-                See demo <Play className="h-4 w-4" />
+                <Link to="/how-it-works">See demo <Play className="h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
@@ -120,6 +117,9 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">ClipAnything</h3>
                 <p className="text-muted-foreground">The fastest way to turn any video into viral shorts. Our AI finds the most engaging moments.</p>
+                <Button className="mt-4" asChild>
+                  <Link to="/signin">Try Now</Link>
+                </Button>
               </CardContent>
             </Card>
             
@@ -130,6 +130,9 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Animated captions</h3>
                 <p className="text-muted-foreground">Automatically add eye-catching animated captions to your videos with just one click.</p>
+                <Button className="mt-4" asChild>
+                  <Link to="/signin">Try Now</Link>
+                </Button>
               </CardContent>
             </Card>
             
@@ -140,36 +143,9 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">AI Reframe</h3>
                 <p className="text-muted-foreground">Resize any video for every platform in 1 click - vertical for TikTok or horizontal for YouTube.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-border">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  <Award className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">AI B-Roll</h3>
-                <p className="text-muted-foreground">Get relevant AI B-Roll footage in 1 click, under 1 minute. Perfect for enhancing your video content.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-border">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  <Calendar className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Social scheduler</h3>
-                <p className="text-muted-foreground">Schedule a month's posts to all platforms in 10 minutes with our integrated social media tools.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-border">
-              <CardContent className="pt-6">
-                <div className="mb-4">
-                  <Users className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Team workspace</h3>
-                <p className="text-muted-foreground">Maximize your team's productivity with AI-powered collaboration tools for video content creation.</p>
+                <Button className="mt-4" asChild>
+                  <Link to="/signin">Try Now</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -242,8 +218,8 @@ const Index = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <Button size="lg" className="gap-2">
-              Try It Now <ArrowRight className="h-4 w-4" />
+            <Button size="lg" className="gap-2" asChild>
+              <Link to="/signin">Try It Now <ArrowRight className="h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
@@ -292,8 +268,8 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Upload your first video and get AI-generated highlights in minutes
             </p>
-            <Button size="lg" className="gap-2">
-              Try Clip-it-Quick Free <ArrowRight className="h-4 w-4" />
+            <Button size="lg" className="gap-2" asChild>
+              <Link to="/signin">Try Clip-it-Quick Free <ArrowRight className="h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
