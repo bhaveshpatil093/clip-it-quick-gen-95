@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ClipAnything from "./pages/ClipAnything";
 import Captions from "./pages/Captions";
+import AIReframe from "./pages/AIReframe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/clipanything" element={<ClipAnything />} />
           <Route path="/captions" element={<Captions />} />
+          <Route path="/aireframe" element={<AIReframe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

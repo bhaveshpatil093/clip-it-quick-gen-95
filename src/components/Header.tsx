@@ -11,7 +11,8 @@ import {
   Calendar, 
   FileCode, 
   FileText, 
-  Users 
+  Users,
+  AspectRatio
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -61,13 +62,13 @@ const Header: React.FC = () => {
                         <p className="text-xs text-muted-foreground">The fastest way to add animated captions</p>
                       </div>
                     </Link>
-                    <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
-                      <ImageUp className="h-5 w-5 text-accent flex-shrink-0" />
+                    <Link to="/aireframe" className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
+                      <AspectRatio className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
                         <h3 className="text-sm font-medium">AI Reframe</h3>
                         <p className="text-xs text-muted-foreground">Resize any video for every platform in 1 click</p>
                       </div>
-                    </div>
+                    </Link>
                     <div className="flex gap-3 p-3 hover:bg-accent/10 rounded-md">
                       <Award className="h-5 w-5 text-accent flex-shrink-0" />
                       <div>
