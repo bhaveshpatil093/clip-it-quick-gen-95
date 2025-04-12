@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Upload, AspectRatio, Play, Layout, Instagram, Youtube, TikTok } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Upload, Play, Layout, Instagram, Youtube } from 'lucide-react';
+import { AspectRatio, TikTok } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
